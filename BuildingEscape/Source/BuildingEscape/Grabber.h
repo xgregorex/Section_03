@@ -45,4 +45,8 @@ private:
 
 	// Return hit for first physics body in reach
 	const FHitResult GetFirstPhysicsBodyInReach();
+
+	//Get Reach for Raycast
+	FVector GetReachLineStart();
+	FVector GetReachLineEnd();
 };
