@@ -20,7 +20,6 @@ UOpenDoor::UOpenDoor()
 void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
-
 	Owner = GetOwner();
 }
 
@@ -38,6 +37,7 @@ float UOpenDoor::GetTotalMassOfActorsOnPlate()
 {
 	float TotalMass = 0.0f;
 	TArray<AActor*>  OverlappingActors;
+	if( !PressurePlate ){ return TotalMass; }
 	PressurePlate->GetOverlappingActors( OverlappingActors );
 
 	for( const auto * Actor : OverlappingActors )
